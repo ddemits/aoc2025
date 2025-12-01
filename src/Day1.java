@@ -4,7 +4,7 @@ void main() throws IOException {
             .mapToInt(line -> (line.charAt(0) == 'L' ? -1 : 1) * Integer.parseInt(line.substring(1)))
             .toArray();
     solve1(commands);
-    solve2Smart(commands);
+    solve2(commands);
 }
 
 private void solve1(int[] commands) {
@@ -20,7 +20,7 @@ private void solve1(int[] commands) {
     System.out.printf("Puzzle 1 solution: [%d]\n", result);
 }
 
-private void solve2Smart(int[] commands) {
+private void solve2(int[] commands) {
     int result = 0;
     int position = 50;
     for (int command : commands) {
